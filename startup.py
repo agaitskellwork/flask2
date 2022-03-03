@@ -9,9 +9,9 @@ startup.py, that just imports the app object. You can then just specify
 startup:app in the Gunicorn command.
 """
 
-#from hello_app.webapp import app
+from hello_app.webapp import server
 
 """Application entry point."""
-from plotlyflask_tutorial import init_app
+#from plotlyflask_tutorial import init_app
 
-app = init_app()
+#app = init_app()
