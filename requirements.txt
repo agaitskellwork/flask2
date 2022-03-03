@@ -4,6 +4,7 @@ dash-html-components
 dash-table
 dash
 flask
+flask_assets
 numpy
 pandas
 plotly
