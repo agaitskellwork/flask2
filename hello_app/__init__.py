@@ -9,7 +9,8 @@ from dash import dcc
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server,  url_base_pathname='/dash/')
 
-app.layout = html.Div(id='dash-container')
+#app.layout = html.Div(id='dash-container')
+app.layout = html.Div([html.H1('Simple Layout',style={'textAlign':'center'})])
 
 @server.route("/dash")
 def my_dash_app():
