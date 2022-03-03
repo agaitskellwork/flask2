@@ -11,7 +11,7 @@ from flask import render_template
 server = flask.Flask(__name__, template_folder="templates")
 app = dash.Dash(__name__, server=server,  url_base_pathname='/dash/')
 
-@app.route('/home')
+@server.route('/home')
 def home():
     return render_template('home.html')
 
