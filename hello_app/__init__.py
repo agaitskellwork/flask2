@@ -18,6 +18,10 @@ app.layout = html.Div([html.H1('Simple Layout',style={'textAlign':'center'})])
 def hello():
     return 'Hi, World!'
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @server.route('/user/<username>')
 def show_user_profile(username):
     # show the user profile for that user
