@@ -1,21 +1,21 @@
 from datetime import datetime
 from flask import Flask, render_template
-from . import server
+from . import app
 
-@server.route("/")
+@app.route("/")
 def home():
     return render_template("home.html")
 
-@server.route("/about/")
+@app.route("/about/")
 def about():
     return render_template("about.html")
 
-@server.route("/contact/")
+@app.route("/contact/")
 def contact():
     return render_template("contact.html")
 
-@server.route("/hello/")
-@server.route("/hello/<name>")
+@app.route("/hello/")
+@app.route("/hello/<name>")
 def hello_there(name = None):
     return render_template(
         "hello_there.html",
@@ -23,6 +23,6 @@ def hello_there(name = None):
         date=datetime.now()
     )
 
-@server.route("/api/data")
+@app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
