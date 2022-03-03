@@ -14,9 +14,9 @@ app = dash.Dash(__name__, server=server,  url_base_pathname='/dash/')
 #app.layout = html.Div(id='dash-container')
 app.layout = html.Div([html.H1('Simple Layout',style={'textAlign':'center'})])
 
-@server.route('/hello')
+@server.route('/hi')
 def hello():
-    return 'Hello, World!'
+    return 'Hi, World!'
 
 @server.route('/user/<username>')
 def show_user_profile(username):
