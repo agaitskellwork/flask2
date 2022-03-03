@@ -18,7 +18,7 @@ app.layout = html.Div([html.H1('Simple Layout',style={'textAlign':'center'})])
 def hello():
     return 'Hi, World!'
 
-@app.route('/home')
+@server.route('/home')
 def home():
     return render_template('home.html')
 
