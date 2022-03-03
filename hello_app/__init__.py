@@ -18,6 +18,11 @@ app.layout = html.Div([html.H1('Simple Layout',style={'textAlign':'center'})])
 def hello():
     return 'Hello, World!'
 
+@server.route('/user/<username>')
+def show_user_profile(username):
+    # show the user profile for that user
+    return f'User {escape(username)}'
+
 @server.route("/dash")
 def my_dash_app():
     return app.index()
