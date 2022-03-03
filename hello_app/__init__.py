@@ -3,6 +3,9 @@
 
 import flask
 import dash
+from dash import html
+from dash import dcc
+
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server,  url_base_pathname='/dash')
 
